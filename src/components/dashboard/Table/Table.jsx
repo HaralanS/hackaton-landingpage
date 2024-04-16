@@ -18,10 +18,33 @@ function Table() {
     setUsingFilter(false);
     window.location.reload();
   };
+
   return (
-    <>
-      { filteredWorkers && filteredWorkers.length > 0 ? (
-        <S.Section>
+    <S.Section>
+      <div className="ClearDiv">
+        <S.H3 className={(usingFilter && !filteredWorkers.length) ? "activeClear" : "inactiveClear"}>
+          Nenhum colaborador encontrado.
+        </S.H3>
+        <Button
+          className={(usingFilter && !filteredWorkers.length) ? "activeClear" : "inactiveClear"}
+          type="submit"
+          onClick={(e) => clearFilters(e)}
+          color="red"
+          appearance="primary"
+        >
+          Limpar filtros
+        </Button>
+      </div>
+      {filteredWorkers && filteredWorkers.length > 0 && (
+        <S.SectionTable>
+          <Button
+            type="submit"
+            onClick={(e) => clearFilters(e)}
+            color="red"
+            appearance="primary"
+          >
+            Limpar filtros
+          </Button>
           <table>
             <thead>
               <tr>
@@ -33,33 +56,20 @@ function Table() {
               </tr>
             </thead>
             <tbody>
-              { filteredWorkers?.map((worker, i) => (
-                <tr key={ i }>
-                  <td>{ worker.nome }</td>
-                  <td>{ worker.localidade }</td>
-                  <td>{ worker.idade }</td>
-                  <td>{ worker.departamento }</td>
-                  <td>{ worker.genero }</td>
+              {filteredWorkers?.map((worker, i) => (
+                <tr key={i}>
+                  <td>{worker.nome}</td>
+                  <td>{worker.localidade}</td>
+                  <td>{worker.idade}</td>
+                  <td>{worker.departamento}</td>
+                  <td>{worker.genero}</td>
                 </tr>
-              )) }
+              ))}
             </tbody>
           </table>
-        </S.Section>
-      ) : null }
-      { usingFilter && (
-        <S.NoWorker>
-          <S.H3>Nenhum colaborador encontrado.</S.H3>
-          <Button
-            type="submit"
-            onClick={ (e) => clearFilters(e) }
-            color="red"
-            appearance="primary"
-          >
-            Limpar filtros
-          </Button>
-        </S.NoWorker>
-      ) }
-    </>
+        </S.SectionTable>
+      )}
+    </S.Section>
   );
 }
 

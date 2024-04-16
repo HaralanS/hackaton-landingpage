@@ -5,6 +5,7 @@ import Table from '../components/dashboard/Table/Table';
 import * as S from './Dashboard.styles';
 
 function Initial() {
+  document.title = 'Dashboard | Corp Solution';
   return (
     <S.Section>
       <FilterInput />
