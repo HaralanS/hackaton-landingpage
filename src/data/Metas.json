@@ -1,0 +1,17 @@
+{
+  "etnia": {
+    "Negros": 30,
+    "Pardos": 20
+  },
+  "gênero": {
+    "Feminino": 50,
+    "Não_binário": 5
+  },
+  "classe_social": {
+    "Baixa_renda": 25,
+    "Classe_média": 60
+  },
+  "escolaridade": {
+    "Ensino_Médio": 30
+  }
+}
