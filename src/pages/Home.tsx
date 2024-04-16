@@ -36,7 +36,6 @@ function Home() {
         <ModalLink toggle={toggleMenu}  url="#missao" title="Missao"/>
     </div>
     )}
-      
     </>
   )
 }
