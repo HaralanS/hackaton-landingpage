@@ -1,0 +1,8 @@
+.border-gradient {
+  background: linear-gradient(rgb(31 41 55), rgb(31 41 55)) padding-box,
+              linear-gradient(to right, darkblue, darkorchid) border-box;
+  border-radius: 8px;
+  border: 2px solid transparent;
+  height: 50px;
+  width: 50px;
+}
