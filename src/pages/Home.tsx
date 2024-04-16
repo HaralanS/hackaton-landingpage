@@ -15,7 +15,7 @@ function Home() {
   const toggleMenu = () => {
     setModal(!modal)
   }
-
+  document.title = 'Trabalhe Conosco | Corp Solution';
   return (
     <>
     <div onClick={() => toggleMenu()} className='z-[4] md:hidden flex flex-col justify-around fixed right-2 top-2 cursor-pointer border-gradient'>
@@ -36,7 +36,6 @@ function Home() {
         <ModalLink toggle={toggleMenu}  url="#missao" title="Missao"/>
     </div>
     )}
-      
     </>
   )
 }
