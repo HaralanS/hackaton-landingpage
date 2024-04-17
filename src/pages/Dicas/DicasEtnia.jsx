@@ -6,6 +6,7 @@ import * as S from './Dicas.styles';
 
 function DicasEtnia() {
   const navigate = useNavigate();
+  document.title = 'Como promover a diversidade racial nas empresas';
   return (
     <S.Section>
       <IoArrowBackCircle onClick={ () => navigate('/') } className="backBtn" size={ 30 } />
