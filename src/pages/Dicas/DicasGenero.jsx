@@ -6,6 +6,7 @@ import * as S from './Dicas.styles';
 
 function DicasGenero() {
   const navigate = useNavigate();
+  document.title = 'Promovendo a diversidade de gênero nas empresas';
   return (
     <S.Section>
       <IoArrowBackCircle onClick={ () => navigate('/') } className="backBtn" size={ 30 } />

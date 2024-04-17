@@ -6,6 +6,7 @@ import * as S from './Dicas.styles';
 
 function DicasClasseSocial() {
   const navigate = useNavigate();
+  document.title = 'Como agregar na vida de pessoas de baixa renda';
   return (
     <S.Section>
       <IoArrowBackCircle onClick={ () => navigate('/') } className="backBtn" size={ 30 } />
