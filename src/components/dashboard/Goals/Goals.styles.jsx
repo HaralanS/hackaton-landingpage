@@ -7,6 +7,8 @@ export const Section = styled.section`
     width: 90%;
 
     h2 {
+      font-size: xx-large;
+      font-weight: bold;
       margin-bottom: 3rem;
       text-align: center;
     }

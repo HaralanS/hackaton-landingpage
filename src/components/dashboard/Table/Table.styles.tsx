@@ -33,34 +33,37 @@ export const SectionTable = styled.section`
     margin-top: 2rem;
     width: 95%;
 
-    table {
-      border-collapse: collapse;
-      margin: 0 auto;
-      margin-top: 3rem;
-      margin-bottom: 3rem;
-    }
+    .tabela-div {
+      width: 100%;
+      overflow: scroll;
 
-    tr {
-      border: 1px solid #ddd;
-    }
+      table {
+        border-collapse: collapse;
+        width: 100%;
+        margin: 0 auto;
+        margin-top: 3rem;
+        margin-bottom: 3rem;
+      }
+      tr {
+        border: 1px solid #ddd;
+      }
+      
+      td {
+        padding: 0.5rem;
+        text-align: center;
+      }
+      
+      tr:nth-child(even) {
+        background-color: #f2f2f2;
+        &:hover { background-color: #42d7a1; color: #fff; }
+      }
     
-    td {
-      padding: 0.5rem;
-      text-align: center;
-    }
-    
-    tr:nth-child(even) {
-      background-color: #f2f2f2;
-
-      &:hover { background-color: #42d7a1; color: #fff; }
-    }
-    
-    tr:nth-child(odd) {
+      tr:nth-child(odd) {
       background-color: #ffffff;
       &:hover { background-color: #42d7a1; color: #fff; }
     }
+    }
   }
-
   @media(min-width: 1280px) { table { width: 100%; } }
 `;
 
