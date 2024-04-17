@@ -8,6 +8,7 @@ import ModalMenu from '../components/ModalMenu';
 import ModalLink from '../components/ModalLink';
 import '../App.css';
 import React from 'react';
+import Forms from '../components/Form/Form';
 
 function Home() {
   const [modal, setModal] = useState(false)
@@ -36,6 +37,7 @@ function Home() {
         <ModalLink toggle={toggleMenu}  url="#missao" title="Missao"/>
     </div>
     )}
+    <Forms />
     </>
   )
 }
